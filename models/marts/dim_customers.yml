@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Tabela de dimensões do DW da Northwind
+    columns:
+      - name: customer_sk
+        description: Chave surrogate da tabela de clientes
+        tests:
+          - unique
+          - not_null

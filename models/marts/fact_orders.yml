@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: fact_orders
+    description: Tabela de fatos Pedidos do DW da Northwind
+    columns:
+      - name: customer_sk
+        description: Chave surrogate da tabela de clientes
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_sk
+
+      - name: employee_sk
+        description: Chave surrogate da tabela de clientes
+        tests:
+          - relationships:
+              to: ref('dim_employees')
+              field: employee_sk
+
+      - name: shipper_sk
+        description: Chave surrogate da tabela de clientes
+        tests:
+          - relationships:
+              to: ref('dim_shippers')
+              field: shipper_sk
+      
+      - name: product_sk
+        description: Chave surrogate da tabela de clientes
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_sk
+
+      - name: supplier_sk
+        description: Chave surrogate da tabela de clientes
+        tests:
+          - relationships:
+              to: ref('dim_suppliers')
+              field: supplier_sk
